@@ -1,0 +1,257 @@
+/* 1918: Ace of Aces — marketing & legal site
+   WWI sepia / aged-paper identity, squadron type, single stylesheet. */
+
+:root {
+  --ink: #221a10;
+  --paper: #e9dcbd;
+  --paper-dark: #d9c79c;
+  --sepia: #8a6a3b;
+  --rust: #9a3b1e;
+  --bg: #14100b;
+  --panel: #20180f;
+  --line: #4a3a22;
+  --gold: #c9a45c;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--paper);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  line-height: 1.6;
+  font-size: 17px;
+}
+
+a { color: var(--gold); }
+a:hover { color: var(--paper); }
+
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- header ---------- */
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: #0d0a06;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.brand {
+  font-family: "Big Caslon", "Book Antiqua", Georgia, serif;
+  letter-spacing: 0.22em;
+  font-size: 20px;
+  color: var(--paper);
+  text-decoration: none;
+}
+
+.brand small {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.34em;
+  color: var(--sepia);
+  margin-top: 2px;
+}
+
+nav.main a {
+  margin-left: 22px;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ---------- hero ---------- */
+
+.hero {
+  text-align: center;
+  padding: 48px 0 8px;
+}
+
+.hero-art {
+  max-width: 560px;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.65);
+}
+
+.hero h1 {
+  font-size: clamp(52px, 11vw, 104px);
+  line-height: 0.95;
+  margin: 28px 0 4px;
+  letter-spacing: 0.06em;
+  color: var(--paper);
+}
+
+.hero .sub {
+  letter-spacing: 0.4em;
+  font-size: clamp(13px, 2.6vw, 18px);
+  color: var(--sepia);
+  text-transform: uppercase;
+  margin: 0 0 20px;
+}
+
+.hero .pitch {
+  max-width: 680px;
+  margin: 0 auto 26px;
+  font-size: 19px;
+}
+
+/* ---------- buttons ---------- */
+
+.btn {
+  display: inline-block;
+  background: var(--rust);
+  color: #f5ead0;
+  text-decoration: none;
+  padding: 14px 30px;
+  border: 1px solid #c0562f;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.btn:hover { background: #b0481f; color: #fff; }
+
+.btn.ghost {
+  background: transparent;
+  border-color: var(--sepia);
+  color: var(--paper);
+}
+
+/* ---------- sections ---------- */
+
+section.block { padding: 44px 0 8px; }
+
+h2.sec {
+  font-size: 30px;
+  letter-spacing: 0.08em;
+  margin: 0 0 6px;
+  color: var(--paper);
+}
+
+.sec-rule {
+  width: 72px;
+  height: 2px;
+  background: var(--rust);
+  margin: 10px 0 22px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.feature {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 20px 22px;
+}
+
+.feature h3 {
+  margin: 0 0 8px;
+  font-size: 19px;
+  letter-spacing: 0.05em;
+  color: var(--gold);
+}
+
+.feature p { margin: 0; font-size: 16px; color: #cfc09c; }
+
+/* ---------- pricing / CTA ---------- */
+
+.pricing {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 30px 28px;
+  text-align: center;
+  margin: 36px 0;
+}
+
+.pricing .price-line {
+  font-size: 24px;
+  margin: 0 0 8px;
+}
+
+.pricing p { margin: 6px 0; color: #cfc09c; }
+
+.coming-soon {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 10px 22px;
+  border: 1px dashed var(--sepia);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: var(--paper);
+}
+
+/* ---------- legal pages ---------- */
+
+.legal {
+  background: #171008;
+  border: 1px solid var(--line);
+  padding: 40px 34px;
+  margin: 36px 0;
+}
+
+.legal h1 {
+  font-size: 36px;
+  margin: 0 0 4px;
+  letter-spacing: 0.04em;
+}
+
+.legal .effective { color: var(--sepia); margin: 0 0 26px; }
+
+.legal h2 {
+  font-size: 21px;
+  margin: 30px 0 8px;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+}
+
+.legal p, .legal li { font-size: 16px; color: #ddd0ac; }
+
+.legal ul { padding-left: 22px; }
+
+/* ---------- footer ---------- */
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  margin-top: 56px;
+  padding: 26px 0 40px;
+  text-align: center;
+  color: var(--sepia);
+  font-size: 14px;
+}
+
+.site-footer a { margin: 0 12px; text-decoration: none; }
+
+.site-footer .foot-brand {
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 560px) {
+  nav.main a { margin-left: 14px; font-size: 12px; }
+  .legal { padding: 28px 20px; }
+  .hero { padding-top: 30px; }
+}
